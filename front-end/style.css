@@ -1,0 +1,81 @@
+body {
+    background-color: #d8d8d8d3;
+    margin: 0px;
+    font-family: sans-serif;
+    color: black;
+    min-height: 100%;
+}
+footer {
+    width: auto;
+    text-indent: 10px;
+}
+.navigation-bar {
+    background-color: rgb(211, 0, 0);
+    height: 60px;
+    min-height: 20px;
+    color: white;
+    font-size: 40px;
+    text-indent: 20px;
+    text-align: left;
+    text-shadow: 2px 2px black;
+    vertical-align: middle;
+    padding-top: 10px;
+}
+.top-bar {
+    width: auto;
+}
+.fetch-button {
+    margin-top: 15px;
+    margin-left: 30px;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+}
+.error-message {
+    margin-left: 30px;
+}
+.scrollable-box::-webkit-scrollbar {
+    display: none;
+  }
+.scrollable-box {
+    background-color: #ffffffd3;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    margin-top: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    width: auto;
+    height: auto;
+    overflow-y: scroll;
+    height: calc(100vh - 240px);
+    text-align: justify;
+}
+.news-object {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding: 30px;
+    background-color: rgb(176, 223, 238);
+}
+.news-details {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.news-title {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: Arial;
+}
+.logo {
+    margin-left: 20px;
+    cursor: pointer;
+}
