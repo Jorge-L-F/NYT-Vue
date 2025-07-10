@@ -4,7 +4,7 @@ import axios from 'axios';
 import {readFile} from 'fs/promises';
 
 const config = JSON.parse(
-    await readFile(new URL('./config.json', import.meta.url))
+    await readFile(new URL('../config.json', import.meta.url))
 );
 
 const app = express();
