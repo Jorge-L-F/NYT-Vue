@@ -16,7 +16,7 @@ Vue.component('news-object', {
     /*html*/
     `
         <div class="news-object">
-            <img :src="news.multimedia[3].url" class="news-image">
+            <img :src="news.multimedia[2].url" class="news-image">
             <div class="news-details">
                 <b class="news-title">{{news.title}}</b><br><br>
                 {{news.abstract}}<br><br>
@@ -25,7 +25,7 @@ Vue.component('news-object', {
             </div>
         </div>
     `
-})
+});
 
 Vue.component('feed-list', {
     props: {
