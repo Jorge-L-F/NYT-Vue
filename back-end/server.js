@@ -9,7 +9,7 @@ const get_url = 'https://api.nytimes.com/svc/topstories/v2/home.json?api-key=' +
 
 
 let corsConfig = {
-    origin: listen_url
+    origin: '*'
 }
 
 app.get('/', cors(corsConfig), (req, res) => {
@@ -17,13 +17,11 @@ app.get('/', cors(corsConfig), (req, res) => {
         .then(
             response => (
                 res.set("Content-Type", "application/json"),
-                res.set("Access-Control-Allow-Origin", "*"),
                 res.send(response.data.results),
                 console.log('Request completed with success.')
             ),
             error => {
                 res.set("Content-Type", "application/json"),
-                res.set("Access-Control-Allow-Origin", "*"),
                 res.send(error),
                 console.log('Request failed with error.\n' + error)
             }
