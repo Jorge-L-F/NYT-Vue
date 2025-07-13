@@ -15,7 +15,7 @@ export const dataStore = defineStore('dataStore', () => {
     axios.get(get_url)
       .then(
         response => (
-          this.newspaper.value = response.data,
+          this.newspaper = response.data,
           this.errorResponse = 'no error'
         ),
         error => (
