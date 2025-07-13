@@ -1,5 +1,5 @@
 <script setup>
-import { dataStore } from '../stores/data';
+import { dataStore } from '../data';
 import { computed } from 'vue';
 import FeedList from '../components/FeedList.vue';
 
