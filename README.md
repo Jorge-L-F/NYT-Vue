@@ -9,6 +9,4 @@ This is a simple application built with HTML, CSS, Vue and Node.js to retrieve a
 
 Note that this application has been tested with Node 22. Ideally it should work with other versions, but may not work with older ones without downgrading the npm packages.
 
-If the application does not work as expected, check if nothing else is using port 7070 (the back-end listen to it by default) in your local system. If you need to change the used port, make sure to do so in the `config.json` file and in the front-end `main.js` file.
-
-If the web page does not load or the http-server fails to start, check if the port set for it is not already in use.
+If the application does not work as expected, check if nothing else is using port 7070 (the back-end listens to it by default) in your local system. If you need to change the used port, make sure to do so in the `config.json` file and in the `front-end/src/stores/data.js` file.
