@@ -8,8 +8,6 @@ const props = defineProps({
   }
 });
 
-const news = ref(props.news);
-
 watchEffect(() => props.news);
 </script>
 

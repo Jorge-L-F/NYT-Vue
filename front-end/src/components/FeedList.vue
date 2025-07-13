@@ -9,8 +9,6 @@ const props = defineProps({
   }
 });
 
-props.newspaper.value = [];
-
 watchEffect(
   () => props.newspaper
 );
