@@ -3,13 +3,15 @@ import cors from 'cors';
 import axios from 'axios';
 import {readFile} from 'fs/promises';
 
+const secrets = JSON.parse(
+    await readFile(new URL('../secrets.json', import.meta.url))
+);
 const config = JSON.parse(
     await readFile(new URL('../config.json', import.meta.url))
 );
 
 const app = express();
-const listen_url = 'http://localhost:' + config.port;
-const get_url = 'https://api.nytimes.com/svc/topstories/v2/home.json?api-key=' + config.token;
+const get_url = 'https://api.nytimes.com/svc/topstories/v2/home.json?api-key=' + secrets.token;
 
 
 let corsConfig = {
