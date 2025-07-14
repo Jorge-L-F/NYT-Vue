@@ -1,9 +1,9 @@
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
 import axios from 'axios';
+import config from '../../config.json';
 
-const port = 7070;
-const get_url = 'http://localhost:' + port;
+const get_url = 'http://localhost:' + config.port;
 
 export const dataStore = defineStore('dataStore', () => {
   const title = 'NYT Feed';
