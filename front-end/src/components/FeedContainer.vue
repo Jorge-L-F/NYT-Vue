@@ -6,7 +6,7 @@ import FeedList from '../components/FeedList.vue';
 const data = dataStore();
 const newspaper = computed(() => data.newspaper);
 const errorResponse = computed(() => data.errorResponse);
-const buttonMessage = computed(() => (data.newspaper.length > 0 || data.errorResponse != data.defaultError) ? 'Refresh News' : 'Fetch News');
+const buttonMessage = computed(() => (data.newspaper.length || data.errorResponse.length) ? 'Refresh News' : 'Fetch News');
 </script>
 
 <template>

@@ -8,15 +8,14 @@ const get_url = 'http://localhost:' + config.port;
 export const dataStore = defineStore('dataStore', () => {
   const title = 'NYT Feed';
   const newspaper = ref([]);
-  const errorResponse = ref('no error');
-  const defaultError = 'no error';
+  const errorResponse = ref('');
 
   function fetchNews() {
     axios.get(get_url)
       .then(
         response => (
           this.newspaper = response.data,
-          this.errorResponse = 'no error'
+          this.errorResponse = ''
         ),
         error => (
           this.errorResponse = 'There was a problem while fetching the articles from NYT. Try refreshing the page.\n' + error
@@ -24,5 +23,5 @@ export const dataStore = defineStore('dataStore', () => {
       );
   };
 
-  return { title, newspaper, errorResponse, defaultError, fetchNews }
+  return { title, newspaper, errorResponse, fetchNews }
 });
