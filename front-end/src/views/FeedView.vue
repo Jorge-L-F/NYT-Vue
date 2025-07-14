@@ -1,7 +1,7 @@
 <script setup>
-import TopBar from '../components/TopBar.vue';
+import FeedContainer from '../components/FeedContainer.vue';
 </script>
 
 <template>
-  <TopBar></TopBar>
+  <FeedContainer></FeedContainer>
 </template>
