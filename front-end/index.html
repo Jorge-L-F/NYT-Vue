@@ -3,16 +3,16 @@
     <head>
         <meta charset="UTF-8"/>
 	    <link href="style.css" type="text/css" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div id="app">
             <div class="navigation-bar">
                 <b class="title">{{title}}</b>
             </div>
-            <div class="top-bar">
+            <div class="feed-container">
                 <button @click="fetchNews" class="fetch-button"><b>{{buttonMessage}}</b></button>
-                <p v-show="errorResponse" class="error-message">{{errorResponse}}</p>
-                <feed-list :newspaper="newspaper"></feed-list>
+                <feed-list :newspaper="newspaper" :error-response="errorResponse"></feed-list>
             </div>
         </div>
     </body>

@@ -19,16 +19,16 @@ Vue.component('news-object', {
             <img v-if="news.multimedia != null || news.multimedia != undefined" :src="news.multimedia[2].url" class="news-image">
             
             <div v-if="news.multimedia == null || news.multimedia == undefined" class="solo-news-details">
-                <b class="news-title">{{news.title}}</b><br><br>
-                {{news.abstract}}<br><br>
-                {{news.byline}}<br><br>
-                <a :href="news.url">Source</a>
+                <p class="news-title"><b>{{news.title}}</b></p>
+                <p class="news-text news-abstract">{{news.abstract}}</p>
+                <p class="news-text">{{news.byline}}</p>
+                <p class="news-text"><a :href="news.url">Source</a></p>
             </div>
             <div v-else class="news-details">
-                <b class="news-title">{{news.title}}</b><br><br>
-                {{news.abstract}}<br><br>
-                {{news.byline}}<br><br>
-                <a :href="news.url">Source</a>
+                <p class="news-title"><b>{{news.title}}</b></p>
+                <p class="news-text news-abstract">{{news.abstract}}</p>
+                <p class="news-text">{{news.byline}}</p>
+                <p class="news-text"><a :href="news.url">Source</a></p>
             </div>
         </div>
     `
@@ -39,13 +39,18 @@ Vue.component('feed-list', {
         newspaper: {
             type: Array,
             required: true
+        },
+        error-response: {
+            type: String,
+            required: true
         }
     },
     template: 
     /*html*/
     `
         <div class="scrollable-box">
-            <p v-show="!newspaper.length">Click the fetch button to fetch the latest news.</p>
+            <p v-show="!newspaper.length && !errorResponse" class="initial-message">Click the fetch button to fetch the latest news.</p>
+            <p v-show="errorResponse" class="error-message">{{errorResponse}}</p>
             <p v-for="news in newspaper">
                 <news-object :news="news"></news-object>
             </p>
