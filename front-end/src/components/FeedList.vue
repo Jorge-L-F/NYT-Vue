@@ -17,7 +17,7 @@ watchEffect(
 <template>
   <div class="scrollable-box">
     <p v-show="!newspaper.length">Click the fetch button to fetch the latest news.</p>
-    <p v-for="news in newspaper">
+    <p v-for="news in newspaper" class="news-entry">
       <NewsObject :news="news"></NewsObject>
     </p>
   </div>
