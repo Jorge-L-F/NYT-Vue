@@ -12,7 +12,6 @@ const buttonMessage = computed(() => (data.newspaper.length || data.errorRespons
 <template>
   <div class="feed-container">
     <button @click="data.fetchNews" class="fetch-button"><b>{{buttonMessage}}</b></button>
-    <p v-show="errorResponse != data.defaultError" class="error-message">{{errorResponse}}</p>
-    <FeedList :newspaper="newspaper"></FeedList>
+    <FeedList :newspaper="newspaper" :errorResponse="errorResponse"></FeedList>
   </div>
 </template>
