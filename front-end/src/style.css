@@ -7,7 +7,6 @@ body {
 }
 footer {
     width: auto;
-    text-indent: 10px;
 }
 .navigation-bar {
     background-color: rgb(211, 0, 0);
@@ -47,13 +46,19 @@ footer {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
     margin-top: 15px;
-    margin-left: max(0px, calc(3vw - 27.6px));
-    margin-right: max(0px, calc(3vw - 27.6px));
+    margin-left: max(15px, calc(3vw - 27.6px));
+    margin-right: max(15px, calc(3vw - 27.6px));
     margin-bottom: 15px;
     width: auto;
     height: auto;
     overflow-y: scroll;
     height: calc(100vh - 200px);
+}
+@media only screen and (max-width: 1000px) {
+    .scrollable-box {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 }
 .news-entry {
     margin: 0px;
@@ -71,23 +76,33 @@ footer {
     margin-left: 40px;
 }
 .news-title {
-    font-size: 20px;
+    font-size: calc(15px + max(0px, calc(1vw - 14.2px)));
     font-family: Arial;
     margin-top: 0px;
 }
 .news-abstract {
     text-align: justify;
 }
+@media only screen and (max-width: 800px) {
+    .news-abstract {
+        display: none;
+    }
+}
 .news-text {
     margin-bottom: 0px;
-    font-size: 16px;
+    font-size: calc(15px + max(0px, calc(0.75vw - 13.2px)));
 }
 img {
     object-fit: scale-down;
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
 }
+@media only screen and (max-width: 400px) {
+    .news-object img {
+        max-width: 125px;
+    }
+}
 .logo {
-    margin-left: 20px;
+    margin-left: max(15px, calc(3vw - 27.6px));
     cursor: pointer;
 }
