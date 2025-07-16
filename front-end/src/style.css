@@ -97,9 +97,9 @@ img {
     max-width: 50%;
     height: auto;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
     .news-object img {
-        max-width: 125px;
+        max-width: 100px;
     }
 }
 .logo {
