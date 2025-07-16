@@ -94,12 +94,24 @@ footer {
 }
 img {
     object-fit: scale-down;
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
     .news-object img {
-        max-width: 125px;
+        max-width: 100px;
+    }
+}
+@media only screen and (min-width: 3000px) {
+    .news-object img {
+        width: 28ex;
+        scale: 1.25;
+    }
+}
+@media only screen and (min-width: 3500px) {
+    .news-object img {
+        width: 35ex;
+        scale: 1.5;
     }
 }
 .logo {
