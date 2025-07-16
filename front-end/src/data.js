@@ -3,7 +3,7 @@ import { defineStore } from 'pinia';
 import axios from 'axios';
 import config from '../../config.json';
 
-const get_url = 'http://localhost:' + config.port;
+const get_url = 'http://' + window.location.hostname + ':' + config.port;
 
 export const dataStore = defineStore('dataStore', () => {
   const title = 'NYT Feed';
