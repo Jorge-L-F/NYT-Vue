@@ -1,5 +1,5 @@
 const port = 7070;
-const get_url = 'http://localhost:' + port;
+const get_url = 'http://' + window.location.hostname + ':' + port;
 
 Vue.use(VueRouter);
 Vue.use(VueHead);
