@@ -1,6 +1,8 @@
 {
-  "name": "front-end",
+  "name": "nyt-vue",
   "version": "0.0.1",
+  "description": "Vue front-end for the NYT-Feed app.",
+  "author": "Jorge Ferreira",
   "private": true,
   "type": "module",
   "scripts": {

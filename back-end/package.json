@@ -1,7 +1,7 @@
 {
-  "name": "nyt-feed-backend",
+  "name": "nyt-node",
   "version": "0.0.1",
-  "description": "",
+  "description": "Node back-end for the NYT-Feed app.",
   "main": "server.js",
   "author": "Jorge Ferreira",
   "private": true,
