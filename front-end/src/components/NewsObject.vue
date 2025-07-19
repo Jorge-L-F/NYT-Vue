@@ -13,7 +13,7 @@ watchEffect(() => props.news);
 
 <template>
   <div class="news-object">
-    <img v-if="news.multimedia != null || news.multimedia != undefined" :src="news.multimedia[2].url" class="news-image">
+    <img v-if="news.multimedia != null && news.multimedia != undefined" :src="news.multimedia[2].url" class="news-image">
     
     <div v-if="news.multimedia == null || news.multimedia == undefined" class="solo-news-details">
       <p class="news-title"><b>{{news.title}}</b></p>
