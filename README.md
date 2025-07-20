@@ -1,5 +1,5 @@
 # NYT-Feed
-This is a simple application built with HTML, CSS, Vue and Node.js to retrieve and show a news feed from the [New York Times journal](https://www.nytimes.com/). This was made in 2021 at the beginning of my internship at [Link Consulting](https://linkconsulting.com/) to prove I was capable of using Vue 2. The original version can be found [here](https://github.com/Jorge-L-F/NYT-Feed/tree/original). Currently the front-end has been updated to use Vue 3 and its CSS rules have also been tweaked to work in a variety of displays.
+This is a simple application built with HTML, CSS, Vue and Node.js to retrieve and show a news feed from the [New York Times journal](https://www.nytimes.com/). This was made in 2021 at the beginning of my internship at [Link Consulting](https://linkconsulting.com/) to prove I was capable of using Vue 2. The original version can be found [here](https://github.com/Jorge-L-F/NYT-Vue/tree/original). Currently the front-end has been updated to use Vue 3 and its CSS rules have also been tweaked to work in a variety of displays.
 
 ##### Setup:
 - Get a token for the journal's api.
