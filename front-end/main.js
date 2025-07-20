@@ -16,9 +16,9 @@ Vue.component('news-object', {
     /*html*/
     `
         <div class="news-object">
-            <img v-if="news.multimedia != null || news.multimedia != undefined" :src="news.multimedia[2].url" class="news-image">
+            <img v-if="news.multimedia != null && news.multimedia != undefined && news.multimedia.length" :src="news.multimedia[2].url" class="news-image">
             
-            <div v-if="news.multimedia == null || news.multimedia == undefined" class="solo-news-details">
+            <div v-if="news.multimedia == null || news.multimedia == undefined || !news.multimedia.length" class="solo-news-details">
                 <p class="news-title"><b>{{news.title}}</b></p>
                 <p class="news-text news-abstract">{{news.abstract}}</p>
                 <p class="news-text">{{news.byline}}</p>
